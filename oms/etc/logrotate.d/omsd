@@ -1,0 +1,7 @@
+/var/log/omsd {
+	compress
+	daily
+	missingok
+	notifempty
+	rotate 10
+}

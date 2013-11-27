@@ -13,13 +13,24 @@ os_packages:
     - python-virtualenv
     - salt-master
 
+/etc/logrotate.d/omsd:
+  file.managed:
+  - source: salt://oms/etc/logrotate.d/omsd
+
+/etc/opennode/logging.conf:
+  file.managed:
+  - source: salt://oms/etc/opennode/logging.conf
+
 /etc/opennode/oms.conf:
   file.managed:
-  - source: salt://oms/opennode/oms.conf
+  - source: salt://oms/etc/opennode/oms.conf
 
 /usr/lib/systemd/system/oms.service:
   file.managed:
   - source: salt://oms/systemd/oms.service
+
+/var/log/opennode:
+  file.directory
 
 /opt/oms:
   virtualenv.managed:
@@ -35,5 +46,4 @@ pip_packages:
   - editable:
     - git+https://github.com/opennode/opennode-management#egg=opennode.oms.core
     - git+https://github.com/opennode/opennode-knot#egg=opennode.oms.knot
-
 
