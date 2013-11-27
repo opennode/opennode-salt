@@ -1,6 +1,4 @@
 # -*- coding: utf-8; indent-tabs-mode: nil; tab-width: 2; -*-
-#
-# Usage: salt-call --local state.sls oms
 
 os_packages:
   pkg.installed:
