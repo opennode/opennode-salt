@@ -1,0 +1,10 @@
+[Unit]
+Description=Opennode Management Service
+Requires=salt-master.service
+After=syslog.target
+ 
+[Service]
+ExecStart=/opt/oms/bin/omsd
+ 
+[Install]
+WantedBy=multi-user.target

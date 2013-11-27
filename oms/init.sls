@@ -11,10 +11,15 @@ os_packages:
     - openssl-devel
     - python-pip
     - python-virtualenv
+    - salt-master
 
 /etc/opennode/oms.conf:
   file.managed:
-  - source: salt://oms/oms.conf
+  - source: salt://oms/opennode/oms.conf
+
+/usr/lib/systemd/system/oms.service:
+  file.managed:
+  - source: salt://oms/systemd/oms.service
 
 /opt/oms:
   virtualenv.managed:
