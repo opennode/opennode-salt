@@ -19,8 +19,4 @@ Run Salt:
 
 	[remote]# salt-call --local state.sls oms
 
-Launch OMS daemon:
-
-	[remote]# systemctl start oms
-
 All done.

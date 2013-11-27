@@ -45,3 +45,7 @@ pip_packages:
     - git+https://github.com/opennode/opennode-management#egg=opennode.oms.core
     - git+https://github.com/opennode/opennode-knot#egg=opennode.oms.knot
 
+oms:
+  service:
+  - enable: True
+  - running
