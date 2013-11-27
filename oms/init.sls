@@ -23,6 +23,10 @@ os_packages:
   file.managed:
   - source: salt://oms/etc/opennode/oms.conf
 
+/opt/oms/oms_passwd:
+  file.managed:
+  - source: salt://oms/oms_passwd
+
 /usr/lib/systemd/system/oms.service:
   file.managed:
   - source: salt://oms/systemd/oms.service
