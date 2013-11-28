@@ -1,4 +1,4 @@
-/var/log/omsd {
+/var/log/oms*.log {
 	compress
 	daily
 	missingok
