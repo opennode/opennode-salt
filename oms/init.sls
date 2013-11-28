@@ -10,6 +10,7 @@ os_packages:
     - python-pip
     - python-virtualenv
     - salt-master
+    - vzctl-core
 
 /etc/logrotate.d/omsd:
   file.managed:
