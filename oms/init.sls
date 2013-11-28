@@ -10,11 +10,15 @@ os_packages:
     - python-pip
     - python-virtualenv
     - salt-master
-    - vzctl-core
 
 /etc/logrotate.d/omsd:
   file.managed:
   - source: salt://oms/etc/logrotate.d/omsd
+
+/etc/opennode/authorized_keys:
+  file.managed:
+  - replace: False
+  - source: salt://oms/etc/opennode/authorized_keys
 
 /etc/opennode/logging.conf:
   file.managed:
