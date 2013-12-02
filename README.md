@@ -15,8 +15,9 @@ Upload configuration:
 
 	[local]~ scp -r oms <REMOTE_IP>:/srv/salt/
 
-Run Salt:
+Run Salt. First step sets up build environment and builds OMS. Second step sets up environment where OMS can be run, and starts the service (requires built OMS to be there already):
 
-	[remote]# salt-call --local state.sls oms
+	[remote]# salt-call --local state.sls oms.buildenv
+	[remote]# salt-call --local state.sls oms.env
 
 All done.
