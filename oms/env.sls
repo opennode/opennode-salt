@@ -33,10 +33,6 @@ os_packages:
 /var/log/opennode:
   file.directory
 
-/opt/oms:
-  virtualenv.managed:
-  - system_site_packages: True
-
 /opt/oms/db:
   file.directory
 
