@@ -43,4 +43,3 @@ os_packages:
 oms:
   service:
   - enable: True
-  - running
